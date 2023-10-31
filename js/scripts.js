@@ -1,4 +1,8 @@
 function BankAccount (name, initialDeposit) {
     this.name = name;
-    this.initialDeposit = initialDeposit;
+    this.balance = initialDeposit;
+}
+
+BankAccount.prototype.depositMoney = function(deposit) {
+  this.balance += deposit;
 }
