@@ -14,25 +14,30 @@
         <label for="">Name</label>
         <input type="text" id="input-name" size="10">
         <br>
-        <label for="">Initial Deposit:</label>
+        <label for="">Initial Deposit: $</label>
         <input type="text" id="initial-deposit" size="6">
         <br>
-        <button type="submit">Create Account</button>
+        <button type="submit" class="btn btn-primary">Create Account</button>
     </form>
-    <form id="change-balance">
-        <h1>Deposit or withdraw funds</h1>
-        <label for="">Deposit Amount:</label>
-        <input type="text" id="deposit" size="4">
-        <br>
-        <label for="">Withdraw Amount:</label>
-        <input type="text" id="withdraw" size="4">
-        <br>
-        <button type="submit">Enter</button>
-    </form>
-
-    <h1>Current Balance:</h1>
-    <div id="">
-        <p>$<span id=""></span></p>
+    <a id="log-out" href="#" class="hidden">Sign out of account</a>
+    <div id="changeBalancePage" class="hidden">
+        <form id="change-balance">
+            <h1><a id="displayDeposit" href="#">Deposit</a> or <a id="displayWithdraw" href="#">Withdraw</a> funds</h1>
+            <div id="depositDisplay" class="hidden">
+                <label for="deposit">Deposit Amount: $</label>
+                <input type="text" id="deposit" size="4">
+            </div>
+            <br>
+            <div id="withdrawDisplay" class="hidden">
+                <label for="withdraw">Withdraw Amount: $</label>
+                <input type="text" id="withdraw" size="4">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Enter</button>
+        </form>
+        <h3 id="result"></h3>
+        <h1>Current Balance:</h1>
+        <h3>$<span id="current-balance"></span></h3>
     </div>
 </body>
 </html>
